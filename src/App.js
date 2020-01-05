@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {HashRouter as Router, Redirect,Switch} from 'react-router-dom';
+import { Redirect,Switch} from 'react-router-dom';
 import {LayoutRoutes} from './router'
 import routerEach from './utils/routerEach'
 import Layout from './layout'

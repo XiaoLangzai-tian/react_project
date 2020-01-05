@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect,Switch } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import Layout from '../layout'
 
 
 export default (routes)=>{
