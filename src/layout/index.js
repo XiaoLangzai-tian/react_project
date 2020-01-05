@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import {Logo} from './style'
 const { Header, Content, Footer, Sider } = Layout;
 
+@withRouter
 
  class Wrapper extends Component {
     render() {
@@ -62,4 +63,4 @@ const { Header, Content, Footer, Sider } = Layout;
     }
 }
 
-export default withRouter(Wrapper);
+export default Wrapper;
