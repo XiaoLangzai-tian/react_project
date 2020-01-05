@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Redirect,Switch } from 'react-router-dom';
-
-
+import Cookies from 'js-cookie';
+import Layout from '../layout'
 
 
 export default (routes)=>{
 
     function isLogin(item){
         if(item.path !== '/login' && item.meta.requirePass){
-            if(localStorage.getItem('token')){
+            if(Cookies.get('token')){
                 return <item.component />
             }else{
                 return <Redirect to="/login" />
@@ -38,7 +38,7 @@ export default (routes)=>{
         )} />
     }
 
-    return routes.map((item,index)=>{
+    return routes.map((item)=>{
         if(item.children){
             return childrenMap(item);
         }else{
